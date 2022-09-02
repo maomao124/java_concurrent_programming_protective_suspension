@@ -44,7 +44,7 @@ public class Producer extends Thread
     public void run()
     {
         GuardedObject guardedObject = Mailboxes.getGuardedObject(id);
-        System.out.println("送信 id:" + id + ", 内容:{}" + mail);
+        System.out.println("送信 id:" + id + ", 内容:" + mail);
         guardedObject.complete(mail);
     }
 }
